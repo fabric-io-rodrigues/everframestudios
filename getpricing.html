@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Videography Pricing | EverFrame Studios</title>
+<meta name="description" content="Wedding videography pricing by EverFrame Studios. Elegant, emotional films crafted to preserve your wedding day with beauty and intention.">
+<link rel="icon" type="image/png" href="FAvicon&#32;BOM&#32;TRANSP.png">
+<link rel="apple-touch-icon" href="FAvicon&#32;BOM&#32;TRANSP.png">
+<meta name="theme-color" content="#111111">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+/* ============================= */
+/* RESET */
+/* ============================= */
+
+*{
+box-sizing:border-box;
+}
+
+html, body{
+margin:0;
+padding:0;
+overflow-x:hidden;
+scroll-behavior:smooth;
+}
+
+body{
+background:#e7d8cf;
+font-family:'Eleganto', sans-serif;
+color:#111;
+}
+
+/* ============================= */
+/* FONT */
+/* ============================= */
+
+@font-face{
+font-family:'Eleganto';
+src:url('ElegantoSans-Thin.ttf') format('truetype');
+font-weight:100;
+font-style:normal;
+font-display:swap;
+}
+
+/* ============================= */
+/* GLOBAL */
+/* ============================= */
+
+:root{
+--gold:#b8955f;
+--ink:#111;
+--footer:#12100f;
+--brand-top-mobile:18px;
+--brand-left-mobile:50%;
+}
+
+.gold{
+color:var(--gold);
+}
+
+/* ============================= */
+/* MENU / BRAND */
+/* ============================= */
+
+.menu{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+padding:28px 40px 0 40px;
+z-index:30;
+display:flex;
+justify-content:flex-end;
+align-items:flex-start;
+pointer-events:none;
+}
+
+.brand-layer{
+position:absolute;
+top:22px;
+left:28px;
+width:260px;
+height:140px;
+z-index:35;
+pointer-events:auto;
+overflow:hidden;
+}
+
+.brand-link{
+display:block;
+position:relative;
+width:100%;
+height:100%;
+line-height:0;
+overflow:hidden;
+}
+
+.brand-logo{
+position:absolute;
+top:50%;
+left:50%;
+width:400px;
+height:auto;
+max-width:none;
+transform:translate(-50%,-50%);
+display:block;
+}
+
+.desktop-nav{
+display:flex;
+align-items:center;
+gap:28px;
+pointer-events:auto;
+}
+
+.desktop-nav a{
+color:white;
+text-decoration:none;
+font-family:'Jost', sans-serif;
+font-size:11px;
+font-weight:400;
+letter-spacing:.34em;
+white-space:nowrap;
+text-transform:uppercase;
+}
+
+.desktop-nav a:hover{
+opacity:.82;
+}
+
+.menu-toggle{
+display:none;
+position:absolute;
+top:20px;
+right:18px;
+width:48px;
+height:48px;
+border:none;
+background:transparent;
+padding:0;
+margin:0;
+z-index:40;
+cursor:pointer;
+pointer-events:auto;
+}
+
+.menu-toggle span{
+display:block;
+width:22px;
+height:1.5px;
+background:white;
+margin:5px auto;
+transition:transform .35s ease, opacity .35s ease;
+transform-origin:center;
+}
+
+.menu-toggle.active span:nth-child(1){
+transform:translateY(6.5px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2){
+opacity:0;
+}
+
+.menu-toggle.active span:nth-child(3){
+transform:translateY(-6.5px) rotate(-45deg);
+}
+
+.mobile-panel{
+display:none;
+position:fixed;
+top:0;
+right:0;
+width:min(82vw, 320px);
+height:100svh;
+background:rgba(10,10,10,0.96);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+padding:90px 28px 28px 28px;
+z-index:38;
+transform:translateX(100%);
+transition:transform .35s ease;
+}
+
+.mobile-panel.open{
+transform:translateX(0);
+}
+
+.mobile-panel nav{
+display:flex;
+flex-direction:column;
+gap:22px;
+}
+
+.mobile-panel a{
+color:white;
+text-decoration:none;
+font-family:'Jost', sans-serif;
+font-size:13px;
+font-weight:400;
+letter-spacing:.34em;
+text-transform:uppercase;
+}
+
+.mobile-panel a:hover{
+opacity:.82;
+}
+
+.mobile-backdrop{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.28);
+z-index:37;
+opacity:0;
+pointer-events:none;
+transition:opacity .35s ease;
+}
+
+.mobile-backdrop.open{
+opacity:1;
+pointer-events:auto;
+}
+
+/* ============================= */
+/* PRICING PAGE */
+/* ============================= */
+
+.pricing-page{
+position:relative;
+min-height:100vh;
+background:
+linear-gradient(rgba(232,225,219,0.88), rgba(232,225,219,0.88)),
+url('hero-pricing.jpg') center center / cover no-repeat;
+}
+
+.pricing-page::before{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(to bottom, rgba(255,255,255,0.10), rgba(255,255,255,0.20));
+pointer-events:none;
+}
+
+.pricing-wrap{
+position:relative;
+z-index:2;
+max-width:1200px;
+margin:0 auto;
+padding:190px 50px 120px 50px;
+display:flex;
+justify-content:flex-start;
+align-items:flex-start;
+}
+
+.pricing-panel{
+max-width:690px;
+text-align:left;
+}
+
+.pricing-kicker{
+margin:0 0 16px 0;
+font-family:'Jost', sans-serif;
+font-size:11px;
+font-weight:400;
+letter-spacing:.34em;
+text-transform:uppercase;
+color:rgba(17,17,17,0.50);
+}
+
+.pricing-title{
+margin:0;
+font-family:'EB Garamond', serif;
+font-size:62px;
+font-weight:400;
+line-height:.98;
+letter-spacing:.1px;
+color:#111;
+max-width:650px;
+}
+
+.pricing-subtitle{
+margin:14px 0 0 0;
+font-family:'EB Garamond', serif;
+font-size:26px;
+font-weight:400;
+line-height:1.14;
+color:rgba(17,17,17,0.90);
+max-width:560px;
+}
+
+.pricing-divider{
+width:86px;
+height:1px;
+margin:28px 0 30px 0;
+background:rgba(17,17,17,0.18);
+}
+
+.pricing-copy{
+max-width:680px;
+font-family:'Eleganto', sans-serif;
+font-size:19px;
+line-height:1.78;
+color:#111;
+}
+
+.pricing-copy p{
+margin:0 0 16px 0;
+}
+
+.pricing-copy strong{
+font-family:'EB Garamond', serif;
+font-weight:500;
+}
+
+.pricing-button-wrap{
+margin-top:34px;
+display:flex;
+justify-content:flex-start;
+}
+
+.pricing-button{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-width:300px;
+padding:18px 26px;
+background:#c9a57b;
+color:white;
+text-decoration:none;
+font-family:'Jost', sans-serif;
+font-size:12px;
+font-weight:400;
+letter-spacing:.28em;
+text-transform:uppercase;
+transition:opacity .25s ease, transform .25s ease, background .25s ease;
+}
+
+.pricing-button:hover{
+opacity:.92;
+transform:translateY(-1px);
+background:#b9956a;
+}
+
+/* ============================= */
+/* HONEYBOOK CONTACT MODAL */
+/* ============================= */
+
+.contact-modal{
+display:none;
+position:fixed;
+inset:0;
+z-index:99999;
+background:rgba(8,8,8,0.62);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+align-items:center;
+justify-content:center;
+padding:34px;
+}
+
+.contact-modal.open{
+display:flex;
+}
+
+.contact-modal__panel{
+position:relative;
+width:min(92vw, 980px);
+height:min(88vh, 860px);
+background:#f3e9e1;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 34px 90px rgba(0,0,0,0.22);
+border:1px solid rgba(255,255,255,0.18);
+display:flex;
+flex-direction:column;
+}
+
+.contact-modal__close{
+appearance:none;
+border:none;
+background:transparent;
+color:#111;
+font-size:24px;
+line-height:1;
+cursor:pointer;
+padding:0;
+margin:0;
+}
+
+.contact-modal__close--minimal{
+position:absolute;
+top:14px;
+right:16px;
+z-index:20;
+width:32px;
+height:32px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(255,255,255,0.72);
+border:1px solid rgba(17,17,17,0.06);
+border-radius:50%;
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
+backdrop-filter:blur(6px);
+-webkit-backdrop-filter:blur(6px);
+transition:background .25s ease, transform .25s ease, opacity .25s ease, box-shadow .25s ease;
+}
+
+.contact-modal__close--minimal:hover{
+background:rgba(255,255,255,0.94);
+transform:scale(1.04);
+opacity:1;
+box-shadow:0 10px 22px rgba(0,0,0,0.10);
+}
+
+.contact-modal__body{
+position:relative;
+flex:1;
+overflow:auto;
+padding:0;
+background:#efe4dc;
+}
+
+.contact-modal__embed{
+width:100%;
+min-height:100%;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.site-footer{
+background:#12100f;
+color:#f2e8e0;
+padding:30px 40px 24px 40px;
+}
+
+.footer-inner{
+max-width:1600px;
+margin:0 auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+min-height:170px;
+}
+
+.footer-left{
+position:relative;
+width:260px;
+min-width:260px;
+height:170px;
+flex-shrink:0;
+overflow:visible;
+}
+
+.footer-logo{
+position:absolute;
+top:50%;
+left:50%;
+width:400px;
+height:auto;
+max-width:none;
+transform:translate(-50%,-58%);
+display:block;
+}
+
+.footer-copy{
+position:absolute;
+left:0;
+bottom:6px;
+font-size:13px;
+line-height:1.5;
+color:rgba(255,255,255,0.8);
+white-space:nowrap;
+font-family:'Jost', sans-serif;
+}
+
+.footer-right{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:flex-end;
+gap:0;
+row-gap:12px;
+min-width:0;
+}
+
+.footer-item{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:0 14px;
+color:#f2e8e0;
+text-decoration:none;
+font-family:'Jost', sans-serif;
+font-size:13px;
+letter-spacing:.03em;
+line-height:1;
+white-space:nowrap;
+border-left:1px solid rgba(255,255,255,0.22);
+}
+
+.footer-item:first-child{
+border-left:none;
+padding-left:0;
+}
+
+.footer-item:hover{
+opacity:.78;
+}
+
+.footer-icon{
+width:16px;
+height:16px;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+flex-shrink:0;
+}
+
+.footer-icon svg{
+width:16px;
+height:16px;
+fill:currentColor;
+display:block;
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media(max-width:1000px){
+
+.menu{
+padding:0;
+height:0;
+justify-content:flex-end;
+}
+
+.brand-layer{
+top:var(--brand-top-mobile);
+left:var(--brand-left-mobile);
+width:132px;
+height:72px;
+transform:translateX(-50%);
+}
+
+.brand-logo{
+width:240px;
+transform:translate(-50%,-50%);
+}
+
+.desktop-nav{
+display:none;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.mobile-panel{
+display:block;
+}
+
+.mobile-backdrop{
+display:block;
+}
+
+.pricing-wrap{
+padding:140px 18px 70px 18px;
+display:block;
+}
+
+.pricing-panel{
+max-width:100%;
+text-align:center;
+}
+
+.pricing-kicker{
+font-size:10px;
+letter-spacing:.24em;
+}
+
+.pricing-title{
+font-size:40px;
+line-height:1;
+max-width:320px;
+margin:0 auto;
+}
+
+.pricing-subtitle{
+font-size:20px;
+line-height:1.14;
+margin:10px auto 0 auto;
+max-width:300px;
+}
+
+.pricing-divider{
+margin:22px auto 22px auto;
+width:62px;
+}
+
+.pricing-copy{
+margin:0 auto;
+font-size:16px;
+line-height:1.65;
+max-width:330px;
+}
+
+.pricing-button-wrap{
+margin-top:26px;
+justify-content:center;
+}
+
+.pricing-button{
+min-width:100%;
+padding:17px 18px;
+font-size:11px;
+letter-spacing:.22em;
+}
+
+.contact-modal{
+padding:0;
+}
+
+.contact-modal__panel{
+width:100vw;
+height:100svh;
+max-width:none;
+max-height:none;
+border-radius:0;
+}
+
+.contact-modal__body{
+padding:0;
+}
+
+.contact-modal__close--minimal{
+top:12px;
+right:12px;
+width:32px;
+height:32px;
+font-size:22px;
+}
+
+.site-footer{
+padding:24px 18px 30px 18px;
+}
+
+.footer-inner{
+flex-direction:column;
+align-items:stretch;
+gap:18px;
+min-height:auto;
+}
+
+.footer-left{
+position:relative;
+width:100%;
+min-width:0;
+height:74px;
+overflow:visible;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.footer-logo{
+position:relative;
+top:auto;
+left:auto;
+width:170px;
+height:auto;
+max-width:170px;
+transform:none;
+display:block;
+}
+
+.footer-copy{
+position:relative;
+left:auto;
+bottom:auto;
+font-size:12px;
+line-height:1.35;
+white-space:normal;
+text-align:right;
+max-width:150px;
+}
+
+.footer-right{
+justify-content:center;
+}
+
+.footer-item{
+padding:0 10px;
+font-size:12px;
+}
+
+.footer-item:nth-child(odd){
+border-left:none;
+padding-left:0;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="menu">
+
+<div class="brand-layer">
+<a href="index.html" class="brand-link" aria-label="EverFrame Studios home">
+<img
+class="brand-logo"
+src="Logo&#32;EF&#32;Dourado&#32;branco.png@v=3"
+alt="EverFrame Studios logo">
+</a>
+</div>
+
+<nav class="desktop-nav" aria-label="Primary navigation">
+<a href="index.html">Home</a>
+<a href="index.html#films">Films</a>
+<a href="index.html#about-us">About</a>
+<a href="getpricing.html">Get Pricing</a>
+<a href="getpricing.html#" onclick="openContactModal(); return false;">Contact</a>
+</nav>
+
+<button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+</header>
+
+<div class="mobile-backdrop" id="mobileBackdrop"></div>
+
+<aside class="mobile-panel" id="mobileMenu" aria-hidden="true">
+<nav aria-label="Mobile navigation">
+<a href="index.html">Home</a>
+<a href="index.html#films">Films</a>
+<a href="index.html#about-us">About</a>
+<a href="getpricing.html">Get Pricing</a>
+<a href="getpricing.html#" onclick="openContactModal(); return false;">Contact</a>
+</nav>
+</aside>
+
+<main class="pricing-page">
+<section class="pricing-wrap">
+<div class="pricing-panel">
+<p class="pricing-kicker">Pricing & Availability</p>
+<h1 class="pricing-title">Wedding films crafted with elegance, emotion, and intention.</h1>
+<p class="pricing-subtitle">Thoughtful coverage designed to preserve the beauty, atmosphere, and feeling of your wedding day.</p>
+
+<div class="pricing-divider"></div>
+
+<div class="pricing-copy">
+<p>Our collections begin at <strong>$2,965</strong>, with most couples investing between <strong>$4,000 and $7,000</strong>, depending on the scale and vision of their celebration.</p>
+
+<p>Each collection includes a <strong>long documentary film</strong>, preserving the formalities and meaningful moments in full, along with a <strong>highlights film</strong> crafted with emotional storytelling, elegance, and intention.</p>
+
+<p>All films are delivered in <strong>4K quality</strong>, offering a polished and lasting viewing experience.</p>
+
+<p><strong>Social media clips</strong>, <strong>premium delivery options</strong>, and additional enhancements are also available for couples who want a more tailored experience.</p>
+
+<p>To receive full details and availability, simply click <strong>Start Your Inquiry</strong>.</p>
+</div>
+
+<div class="pricing-button-wrap">
+<a href="getpricing.html#" class="pricing-button" onclick="openContactModal(); return false;">Start Your Inquiry</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+
+<div class="footer-inner">
+
+<div class="footer-left">
+<img
+class="footer-logo"
+src="Logo&#32;EF&#32;Dourado&#32;branco.png@v=3"
+alt="EverFrame Studios footer logo"
+loading="lazy"
+decoding="async">
+<div class="footer-copy">Copyright © 2026. All rights reserved.</div>
+</div>
+
+<div class="footer-right">
+
+<a class="footer-item" href="tel:9086564891">
+<span class="footer-icon">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M6.6 10.8c1.6 3.1 4.2 5.6 7.3 7.3l2.4-2.4c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.3 22 2 13.7 2 3c0-.6.4-1 1-1h3.9c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-1.6 1.9z"/>
+</svg>
+</span>
+9086564891
+</a>
+
+<a class="footer-item" href="mailto:info@everframestudios.com">
+<span class="footer-icon">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
+</svg>
+</span>
+info@everframestudios.com
+</a>
+
+<a class="footer-item" href="https://www.instagram.com/everframestudiosNJ" target="_blank" rel="noopener noreferrer">
+<span class="footer-icon">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2A3 3 0 0 0 4 7v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.3a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 18 6.3z"/>
+</svg>
+</span>
+@everframestudiosNJ
+</a>
+
+<a class="footer-item" href="getpricing.html#" onclick="openContactModal(); return false;">
+<span class="footer-icon">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M4 6h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm16 3h2v6h-2z"/>
+</svg>
+</span>
+Start Inquiry
+</a>
+
+</div>
+
+</div>
+
+</footer>
+
+<div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Contact form">
+  <div class="contact-modal__panel">
+    <button class="contact-modal__close contact-modal__close--minimal" type="button" onclick="closeContactModal()" aria-label="Close contact form">✕</button>
+    <div class="contact-modal__body">
+      <div class="contact-modal__embed">
+        <div class="hb-p-631fe8618fd5c2000857943f-2"></div>
+        <img height="1" width="1" style="display:none" src="https://www.honeybook.com/p.png?pid=631fe8618fd5c2000857943f" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(h,b,s,n,i,p,e,t){
+  h._HB_ = h._HB_ || {};
+  h._HB_.pid = i;
+  t = b.createElement(s);
+  t.type = "text/javascript";
+  t.async = true;
+  t.src = n;
+  e = b.getElementsByTagName(s)[0];
+  e.parentNode.insertBefore(t,e);
+})(window,document,"script","https://widget.honeybook.com/assets_users_production/websiteplacements/placement-controller.min.js","631fe8618fd5c2000857943f");
+</script>
+
+<script>
+(function(){
+
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileBackdrop = document.getElementById('mobileBackdrop');
+const contactModal = document.getElementById('contactModal');
+
+function openMobileMenu(){
+if(!menuToggle || !mobileMenu || !mobileBackdrop) return;
+menuToggle.classList.add('active');
+menuToggle.setAttribute('aria-expanded', 'true');
+mobileMenu.classList.add('open');
+mobileMenu.setAttribute('aria-hidden', 'false');
+mobileBackdrop.classList.add('open');
+document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu(){
+if(!menuToggle || !mobileMenu || !mobileBackdrop) return;
+menuToggle.classList.remove('active');
+menuToggle.setAttribute('aria-expanded', 'false');
+mobileMenu.classList.remove('open');
+mobileMenu.setAttribute('aria-hidden', 'true');
+mobileBackdrop.classList.remove('open');
+document.body.style.overflow = contactModal && contactModal.classList.contains('open') ? 'hidden' : '';
+}
+
+window.openContactModal = function(){
+if(!contactModal) return;
+contactModal.classList.add('open');
+contactModal.setAttribute('aria-hidden', 'false');
+document.body.style.overflow = 'hidden';
+};
+
+window.closeContactModal = function(){
+if(!contactModal) return;
+contactModal.classList.remove('open');
+contactModal.setAttribute('aria-hidden', 'true');
+document.body.style.overflow = '';
+};
+
+if(menuToggle){
+menuToggle.addEventListener('click', function(){
+if(mobileMenu.classList.contains('open')){
+closeMobileMenu();
+}else{
+openMobileMenu();
+}
+});
+}
+
+if(mobileBackdrop){
+mobileBackdrop.addEventListener('click', function(){
+closeMobileMenu();
+});
+}
+
+document.querySelectorAll('.mobile-panel a').forEach(function(link){
+link.addEventListener('click', function(){
+closeMobileMenu();
+});
+});
+
+if(contactModal){
+contactModal.addEventListener('click', function(e){
+if(e.target === contactModal){
+closeContactModal();
+}
+});
+}
+
+document.addEventListener('keydown', function(e){
+if(e.key === 'Escape'){
+if(mobileMenu && mobileMenu.classList.contains('open')){
+closeMobileMenu();
+}
+if(contactModal && contactModal.classList.contains('open')){
+closeContactModal();
+}
+}
+});
+
+})();
+</script>
+
+</body>
+</html>
