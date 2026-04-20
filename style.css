@@ -397,6 +397,15 @@ background:
 linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.12) 44%, rgba(0,0,0,0.22) 100%);
 }
 
+.hero-text-wrapper{
+  position:relative;
+  z-index:1;
+  margin-top:-100svh;
+  height:100svh;
+  min-height:700px;
+  pointer-events:none;
+}
+
 .overlay{
 position:absolute;
 top:66%;
@@ -407,6 +416,7 @@ z-index:5;
 max-width:90%;
 width:max-content;
 padding:0;
+pointer-events:auto;
 }
 
 .overlay h1{
@@ -848,7 +858,6 @@ display:none;
   position: relative;
   margin: 44px auto 0 auto;
   background: #000;
-  clip-path: inset(0);
 }
 
 .offer-bg-sticky {
@@ -2734,6 +2743,11 @@ display:block;
 .hero{
 min-height:100svh;
 height:100svh;
+}
+
+.hero-text-wrapper{
+  min-height:100svh;
+  height:100svh;
 }
 
 .hero video{
