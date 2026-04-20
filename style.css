@@ -479,7 +479,7 @@ transform:translateY(-1px);
 .portfolio-wrapper{
 max-width:var(--max-wide);
 margin:auto;
-padding:88px 28px 54px 28px;
+padding:88px 0 54px 0;
 background:var(--bg-main);
 }
 
@@ -2555,6 +2555,7 @@ opacity:.92;
 background:var(--footer);
 color:#f2e8e0;
 padding:30px 34px 24px 34px;
+overflow:hidden;
 }
 
 .footer-inner{
@@ -2805,7 +2806,7 @@ border:1px solid rgba(255,255,255,0.92);
 .portfolio-wrapper{
 width:100%;
 max-width:100%;
-padding:46px 10px 36px 10px;
+padding:46px 0 36px 0;
 overflow:hidden;
 }
 
