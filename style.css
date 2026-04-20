@@ -889,7 +889,9 @@ display:none;
 .offer-section__inner {
   position: relative;
   z-index: 2;
+  margin-top: -100vh;
   padding: 15vh;
+  min-height: 110vh;
 }
 
 .offer-section__side{
@@ -2994,7 +2996,6 @@ background:#111;
 
 .offer-section{
 margin-top:24px;
-min-height:760px;
 }
 
 .offer-section video{
@@ -3009,7 +3010,8 @@ filter:brightness(.56) contrast(1.02) saturate(.86);
 }
 
 .offer-section__inner{
-min-height:760px;
+min-height:max(760px, 110vh);
+margin-top:-100vh;
 padding:72px 22px 42px 22px;
 display:flex;
 flex-direction:column;
