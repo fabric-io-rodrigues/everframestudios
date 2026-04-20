@@ -11,14 +11,6 @@ const fitModal = document.getElementById('fitModal');
 const badFitModal = document.getElementById('badFitModal');
 const mobilePreloader = document.getElementById('mobilePreloader');
 
-document.querySelectorAll('video[autoplay]').forEach(function(v){
-v.muted = true;
-var p = v.play();
-if(p !== undefined){
-p.catch(function(){ v.muted = true; v.play(); });
-}
-});
-
 if(window.innerWidth <= 1000 && mobilePreloader){
 window.addEventListener('load', function(){
 setTimeout(function(){
