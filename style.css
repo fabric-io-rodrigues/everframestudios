@@ -2820,7 +2820,7 @@ border:1px solid rgba(255,255,255,0.92);
 width:100%;
 max-width:100%;
 padding:46px 0 36px 0;
-overflow:hidden;
+overflow:clip;
 }
 
 .intro-signature{
