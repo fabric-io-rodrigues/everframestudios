@@ -478,7 +478,7 @@ transform:translateY(-1px);
 
 .portfolio-wrapper{
 max-width:var(--max-wide);
-margin:auto;
+margin:0px;
 padding:88px 0 54px 0;
 background:var(--bg-main);
 }
