@@ -1180,7 +1180,6 @@ align-items:start;
 .about-dark-image{
 position:sticky;
 top:40px; /* Distance from top */
-height:calc(100vh - 80px); /* Height of the sticky image container */
 display:flex;
 align-items:center;
 justify-content:center;

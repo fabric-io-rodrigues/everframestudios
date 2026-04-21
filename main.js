@@ -13,9 +13,9 @@ const mobilePreloader = document.getElementById('mobilePreloader');
 
 if(window.innerWidth <= 1000 && mobilePreloader){
 window.addEventListener('load', function(){
-setTimeout(function(){
+//setTimeout(function(){
 mobilePreloader.classList.add('hidden');
-}, 1350);
+//}, 150);
 });
 }
 
